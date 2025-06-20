@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Map background -->
+  <rect width="800" height="600" fill="#f1f3f4" />
+  
+  <!-- Roads -->
+  <g fill="none" stroke="#e0e0e0" stroke-width="15">
+    <!-- Horizontal roads -->
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    <line x1="0" y1="500" x2="800" y2="500" />
+    
+    <!-- Vertical roads -->
+    <line x1="100" y1="0" x2="100" y2="600" />
+    <line x1="200" y1="0" x2="200" y2="600" />
+    <line x1="300" y1="0" x2="300" y2="600" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="500" y1="0" x2="500" y2="600" />
+    <line x1="600" y1="0" x2="600" y2="600" />
+    <line x1="700" y1="0" x2="700" y2="600" />
+  </g>
+  
+  <!-- Main roads -->
+  <g fill="none" stroke="#d0d0d0" stroke-width="22">
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+  </g>
+  
+  <!-- Road markings -->
+  <g stroke="#ffffff" stroke-width="2" stroke-dasharray="10 10">
+    <!-- Horizontal markings -->
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="200" x2="800" y2="200" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="400" x2="800" y2="400" />
+    <line x1="0" y1="500" x2="800" y2="500" />
+    
+    <!-- Vertical markings -->
+    <line x1="100" y1="0" x2="100" y2="600" />
+    <line x1="200" y1="0" x2="200" y2="600" />
+    <line x1="300" y1="0" x2="300" y2="600" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="500" y1="0" x2="500" y2="600" />
+    <line x1="600" y1="0" x2="600" y2="600" />
+    <line x1="700" y1="0" x2="700" y2="600" />
+  </g>
+  
+  <!-- Parks (green areas) -->
+  <g fill="#c8e6c9">
+    <rect x="50" y="50" width="100" height="100" rx="10" />
+    <rect x="550" y="350" width="150" height="150" rx="10" />
+    <rect x="150" y="400" width="100" height="100" rx="10" />
+    <rect x="650" y="50" width="100" height="200" rx="10" />
+    <circle cx="350" cy="150" r="50" />
+  </g>
+  
+  <!-- Water bodies (blue areas) -->
+  <g fill="#bbdefb">
+    <rect x="450" y="50" width="150" height="100" rx="20" />
+    <circle cx="200" cy="350" r="70" />
+  </g>
+  
+  <!-- Buildings (gray blocks) -->
+  <g fill="#e0e0e0" stroke="#bdbdbd" stroke-width="1">
+    <!-- Top left quadrant -->
+    <rect x="20" y="170" width="30" height="20" />
+    <rect x="60" y="170" width="25" height="20" />
+    <rect x="20" y="210" width="60" height="30" />
+    
+    <!-- Top right quadrant -->
+    <rect x="420" y="170" width="30" height="20" />
+    <rect x="460" y="170" width="25" height="20" />
+    <rect x="420" y="210" width="60" height="30" />
+    <rect x="510" y="210" width="40" height="50" />
+    <rect x="560" y="210" width="30" height="30" />
+    
+    <!-- Bottom left quadrant -->
+    <rect x="320" y="320" width="30" height="20" />
+    <rect x="320" y="350" width="60" height="30" />
+    <rect x="270" y="420" width="40" height="50" />
+    <rect x="330" y="420" width="50" height="30" />
+    
+    <!-- Bottom right quadrant -->
+    <rect x="420" y="320" width="60" height="40" />
+    <rect x="420" y="370" width="30" height="20" />
+    <rect x="460" y="370" width="25" height="20" />
+  </g>
+  
+  <!-- Scooter markers -->
+  <g>
+    <!-- Scooter 1 -->
+    <circle cx="150" cy="250" r="15" fill="#00c853" stroke="#ffffff" stroke-width="2" />
+    <text x="150" y="255" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">1</text>
+    
+    <!-- Scooter 2 -->
+    <circle cx="350" cy="350" r="15" fill="#00c853" stroke="#ffffff" stroke-width="2" />
+    <text x="350" y="355" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">2</text>
+    
+    <!-- Scooter 3 -->
+    <circle cx="450" cy="250" r="15" fill="#00c853" stroke="#ffffff" stroke-width="2" />
+    <text x="450" y="255" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">3</text>
+    
+    <!-- Scooter 4 -->
+    <circle cx="600" cy="150" r="15" fill="#00c853" stroke="#ffffff" stroke-width="2" />
+    <text x="600" y="155" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">4</text>
+    
+    <!-- Scooter 5 -->
+    <circle cx="250" cy="450" r="15" fill="#00c853" stroke="#ffffff" stroke-width="2" />
+    <text x="250" y="455" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">5</text>
+  </g>
+  
+  <!-- User location -->
+  <g>
+    <circle cx="400" cy="300" r="10" fill="#2196f3" />
+    <circle cx="400" cy="300" r="20" fill="#2196f3" fill-opacity="0.3" />
+    <circle cx="400" cy="300" r="30" fill="#2196f3" fill-opacity="0.1" />
+  </g>
+  
+  <!-- Map controls (simplified) -->
+  <g transform="translate(730, 100)">
+    <rect x="0" y="0" width="40" height="80" rx="5" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" />
+    <line x1="20" y1="15" x2="20" y2="25" stroke="#757575" stroke-width="2" />
+    <line x1="15" y1="20" x2="25" y2="20" stroke="#757575" stroke-width="2" />
+    <line x1="20" y1="55" x2="20" y2="65" stroke="#757575" stroke-width="2" />
+    <line x1="10" y1="40" x2="30" y2="40" stroke="#e0e0e0" stroke-width="1" />
+  </g>
+  
+  <!-- Map attribution (simplified) -->
+  <g transform="translate(10, 580)">
+    <text font-family="Arial" font-size="10" fill="#757575">© Google Maps</text>
+  </g>
+  
+  <!-- Map scale -->
+  <g transform="translate(650, 580)">
+    <line x1="0" y1="0" x2="100" y2="0" stroke="#757575" stroke-width="2" />
+    <line x1="0" y1="-5" x2="0" y2="5" stroke="#757575" stroke-width="2" />
+    <line x1="100" y1="-5" x2="100" y2="5" stroke="#757575" stroke-width="2" />
+    <text x="50" y="-10" font-family="Arial" font-size="10" fill="#757575" text-anchor="middle">1 km</text>
+  </g>
+</svg>

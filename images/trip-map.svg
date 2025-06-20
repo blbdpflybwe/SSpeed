@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+  <rect width="800" height="300" fill="#f0f0f0" />
+  <rect x="50" y="50" width="700" height="200" fill="#ffffff" stroke="#dddddd" stroke-width="2" />
+  
+  <!-- Маршрут пользователя -->
+  <path d="M100 200 L200 150 L300 180 L400 120 L500 170 L600 140 L700 190" 
+        stroke="#00c853" stroke-width="3" fill="none" />
+  
+  <!-- Маркер пользователя (текущее положение) -->
+  <circle cx="700" cy="190" r="8" fill="#ff5722" />
+  
+  <!-- Начальная точка -->
+  <circle cx="100" cy="200" r="6" fill="#2196f3" />
+</svg> 

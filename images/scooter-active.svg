@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <!-- Фон с прозрачностью -->
+  <rect width="600" height="400" fill="transparent"/>
+  
+  <!-- Основной фон - градиент -->
+  <defs>
+    <linearGradient id="floorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f9f9f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+    </linearGradient>
+    <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
+      <feOffset dx="3" dy="5" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Фон для самоката -->
+  <rect x="50" y="300" width="500" height="50" rx="5" fill="url(#floorGradient)" opacity="0.8"/>
+  
+  <!-- Реалистичный электросамокат модели SSpeed Pro -->
+  <g transform="translate(150, 180) scale(1.5)" filter="url(#drop-shadow)">
+    <!-- Платформа самоката -->
+    <rect x="30" y="80" width="180" height="12" rx="6" fill="#1a1a1a" stroke="#000" stroke-width="1"/>
+    
+    <!-- Дека с текстурированной поверхностью -->
+    <rect x="40" y="77" width="160" height="10" rx="5" fill="#222222"/>
+    <g fill="#00c853" opacity="0.8">
+      <rect x="50" y="79" width="10" height="6" rx="1"/>
+      <rect x="70" y="79" width="10" height="6" rx="1"/>
+      <rect x="90" y="79" width="10" height="6" rx="1"/>
+      <rect x="110" y="79" width="10" height="6" rx="1"/>
+      <rect x="130" y="79" width="10" height="6" rx="1"/>
+      <rect x="150" y="79" width="10" height="6" rx="1"/>
+      <rect x="170" y="79" width="10" height="6" rx="1"/>
+    </g>
+    
+    <!-- Передний блок -->
+    <rect x="30" y="72" width="25" height="15" rx="3" fill="#1a1a1a"/>
+    
+    <!-- Задний блок с красным стоп-сигналом -->
+    <rect x="185" y="72" width="25" height="15" rx="3" fill="#1a1a1a"/>
+    <rect x="200" y="75" width="5" height="5" rx="2" fill="#ff0000"/>
+    
+    <!-- Колеса с реалистичными шинами и дисками -->
+    <!-- Заднее колесо -->
+    <g transform="translate(195, 92)">
+      <circle cx="0" cy="0" r="18" fill="#111111" stroke="#000000" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="15" fill="#222222"/>
+      <circle cx="0" cy="0" r="10" fill="#333333"/>
+      <circle cx="0" cy="0" r="5" fill="#444444"/>
+      <circle cx="0" cy="0" r="2" fill="#000000"/>
+      <!-- Блик для объемности -->
+      <ellipse cx="-5" cy="-5" rx="5" ry="3" fill="#ffffff" opacity="0.2"/>
+    </g>
+    
+    <!-- Переднее колесо -->
+    <g transform="translate(45, 92)">
+      <circle cx="0" cy="0" r="18" fill="#111111" stroke="#000000" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="15" fill="#222222"/>
+      <circle cx="0" cy="0" r="10" fill="#333333"/>
+      <circle cx="0" cy="0" r="5" fill="#444444"/>
+      <circle cx="0" cy="0" r="2" fill="#000000"/>
+      <!-- Блик для объемности -->
+      <ellipse cx="-5" cy="-5" rx="5" ry="3" fill="#ffffff" opacity="0.2"/>
+    </g>
+    
+    <!-- Руль и стойка -->
+    <g>
+      <!-- Стойка -->
+      <rect x="40" y="0" width="8" height="72" rx="2" fill="#1a1a1a" stroke="#000000" stroke-width="0.5"/>
+      
+      <!-- Руль -->
+      <rect x="15" y="0" width="60" height="8" rx="4" fill="#1a1a1a" stroke="#000000" stroke-width="0.5"/>
+      
+      <!-- Рукоятки -->
+      <rect x="15" y="0" width="15" height="8" rx="4" fill="#333333"/>
+      <rect x="60" y="0" width="15" height="8" rx="4" fill="#333333"/>
+      
+      <!-- Панель управления -->
+      <rect x="30" y="8" width="30" height="8" rx="2" fill="#222222"/>
+      <rect x="35" y="10" width="20" height="4" rx="1" fill="#00c853"/>
+      
+      <!-- Фара -->
+      <circle cx="44" cy="20" r="4" fill="#f5f5f5" stroke="#dddddd" stroke-width="1"/>
+      <circle cx="44" cy="20" r="2" fill="#ffffff"/>
+      
+      <!-- Провода/кабели -->
+      <path d="M44 25 L44 40" stroke="#333333" stroke-width="1.5" fill="none"/>
+    </g>
+    
+    <!-- Логотип компании -->
+    <text x="110" y="87" fill="#00c853" font-family="Arial" font-weight="bold" font-size="9" text-anchor="middle">SSpeed Pro</text>
+    
+    <!-- Батарея снизу -->
+    <rect x="65" y="92" width="110" height="5" rx="2" fill="#333333"/>
+    
+    <!-- Дополнительные детали - крылья -->
+    <path d="M30 80 Q 45 60 60 80" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+    <path d="M180 80 Q 195 60 210 80" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+    
+    <!-- Блики для реалистичности -->
+    <line x1="60" y1="77" x2="180" y2="77" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+    <line x1="40" y1="5" x2="40" y2="70" stroke="#ffffff" stroke-width="0.5" opacity="0.2"/>
+  </g>
+  
+  <!-- Тень под самокатом -->
+  <ellipse cx="300" cy="350" rx="160" ry="10" fill="#000000" opacity="0.15"/>
+  
+  <!-- Статус аренды - зеленый индикатор -->
+  <g transform="translate(480, 80)">
+    <circle cx="0" cy="0" r="15" fill="#00c853" opacity="0.8"/>
+    <text x="0" y="4" font-family="Arial" font-weight="bold" font-size="12" fill="white" text-anchor="middle">ON</text>
+  </g>
+</svg> 

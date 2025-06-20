@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F7FA;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="70%" cy="30%" r="30%" fx="70%" fy="30%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Фон - городской пейзаж -->
+  <rect width="800" height="600" fill="url(#skyGradient)"/>
+  
+  <!-- Солнечное свечение -->
+  <circle cx="700" cy="100" r="150" fill="url(#sunGlow)" opacity="0.6"/>
+  
+  <!-- Солнце -->
+  <circle cx="700" cy="100" r="40" fill="#FFD700"/>
+  
+  <!-- Горизонт города -->
+  <rect x="0" y="350" width="800" height="250" fill="#E8E8E8"/>
+  
+  <!-- Силуэты зданий -->
+  <rect x="50" y="200" width="80" height="150" fill="#A0A0A0"/>
+  <rect x="130" y="150" width="60" height="200" fill="#B0B0B0"/>
+  <rect x="190" y="220" width="100" height="130" fill="#909090"/>
+  <rect x="290" y="180" width="70" height="170" fill="#A8A8A8"/>
+  <rect x="360" y="250" width="120" height="100" fill="#989898"/>
+  <rect x="480" y="200" width="90" height="150" fill="#A5A5A5"/>
+  <rect x="570" y="230" width="60" height="120" fill="#B8B8B8"/>
+  <rect x="630" y="180" width="110" height="170" fill="#9A9A9A"/>
+  
+  <!-- Дорога -->
+  <rect x="0" y="400" width="800" height="100" fill="#555555"/>
+  
+  <!-- Разделительная полоса на дороге -->
+  <rect x="50" y="450" width="80" height="6" fill="white"/>
+  <rect x="200" y="450" width="80" height="6" fill="white"/>
+  <rect x="350" y="450" width="80" height="6" fill="white"/>
+  <rect x="500" y="450" width="80" height="6" fill="white"/>
+  <rect x="650" y="450" width="80" height="6" fill="white"/>
+  
+  <!-- Парковочные места для самокатов -->
+  <rect x="100" y="380" width="150" height="20" fill="#00c853" opacity="0.7"/>
+  <rect x="500" y="380" width="150" height="20" fill="#00c853" opacity="0.7"/>
+  
+  <!-- Группа людей с самокатами -->
+  <!-- Человек 1 с самокатом -->
+  <g transform="translate(150, 360) scale(0.7)">
+    <!-- Самокат -->
+    <rect x="0" y="30" width="80" height="5" rx="2" fill="#333"/>
+    <circle cx="10" cy="40" r="10" fill="#444"/>
+    <circle cx="70" cy="40" r="10" fill="#444"/>
+    <rect x="65" y="0" width="5" height="30" fill="#555"/>
+    <rect x="55" y="0" width="25" height="3" rx="1" fill="#555"/>
+    
+    <!-- Человек -->
+    <circle cx="65" cy="-15" r="10" fill="#FFA07A"/>
+    <rect x="60" y="-5" width="10" height="25" fill="#4682B4"/>
+    <rect x="55" y="10" width="6" height="15" fill="#1E90FF"/>
+    <rect x="69" y="10" width="6" height="15" fill="#1E90FF"/>
+  </g>
+  
+  <!-- Человек 2 с самокатом -->
+  <g transform="translate(300, 390) scale(0.6)">
+    <!-- Самокат -->
+    <rect x="0" y="30" width="80" height="5" rx="2" fill="#222"/>
+    <circle cx="10" cy="40" r="10" fill="#333"/>
+    <circle cx="70" cy="40" r="10" fill="#333"/>
+    <rect x="65" y="0" width="5" height="30" fill="#444"/>
+    <rect x="55" y="0" width="25" height="3" rx="1" fill="#444"/>
+    
+    <!-- Человек -->
+    <circle cx="65" cy="-15" r="10" fill="#D2B48C"/>
+    <rect x="60" y="-5" width="10" height="25" fill="#8B4513"/>
+    <rect x="55" y="10" width="6" height="15" fill="#A0522D"/>
+    <rect x="69" y="10" width="6" height="15" fill="#A0522D"/>
+  </g>
+  
+  <!-- Человек 3 с самокатом -->
+  <g transform="translate(550, 365) scale(0.65)">
+    <!-- Самокат -->
+    <rect x="0" y="30" width="80" height="5" rx="2" fill="#111"/>
+    <circle cx="10" cy="40" r="10" fill="#222"/>
+    <circle cx="70" cy="40" r="10" fill="#222"/>
+    <rect x="65" y="0" width="5" height="30" fill="#333"/>
+    <rect x="55" y="0" width="25" height="3" rx="1" fill="#333"/>
+    
+    <!-- Человек -->
+    <circle cx="65" cy="-15" r="10" fill="#FFE4B5"/>
+    <rect x="60" y="-5" width="10" height="25" fill="#9370DB"/>
+    <rect x="55" y="10" width="6" height="15" fill="#8A2BE2"/>
+    <rect x="69" y="10" width="6" height="15" fill="#8A2BE2"/>
+  </g>
+  
+  <!-- Добавляем лого компании -->
+  <text x="400" y="530" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="32" fill="#00c853">SSpeed - Экологичная мобильность</text>
+  
+  <!-- Зелёный акцент - деревья для экологичности -->
+  <g transform="translate(50, 370) scale(0.6)">
+    <circle cx="0" cy="0" r="20" fill="#228B22"/>
+    <rect x="-5" y="0" width="10" height="30" fill="#8B4513"/>
+  </g>
+  
+  <g transform="translate(730, 350) scale(0.7)">
+    <circle cx="0" cy="0" r="25" fill="#228B22"/>
+    <rect x="-6" y="0" width="12" height="40" fill="#8B4513"/>
+  </g>
+  
+  <g transform="translate(450, 360) scale(0.5)">
+    <circle cx="0" cy="0" r="15" fill="#228B22"/>
+    <rect x="-4" y="0" width="8" height="25" fill="#8B4513"/>
+  </g>
+</svg> 
