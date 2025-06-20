@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSpeed - Прокат самокатов</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">SSpeed</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#how-it-works">Как это работает</a></li>
+                    <li><a href="#scooters">Самокаты</a></li>
+                    <li><a href="#tariffs">Тарифы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li id="dashboard-link" style="display: none;"><a href="dashboard.html">Личный кабинет</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="theme-toggle" aria-label="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="login-button" class="btn btn-login" onclick="openModal('login-modal')">Войти</button>
+                <button id="register-button" class="btn btn-primary" onclick="openModal('register-modal')">Регистрация</button>
+                <button id="logout-button" class="btn btn-login" onclick="logout()" style="display: none;">Выйти</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Быстрая аренда электросамокатов</h1>
+                <p>Передвигайтесь по городу с комфортом и экономьте время</p>
+                <button class="btn btn-primary btn-rent" onclick="rentNowAction()">Арендовать самокат</button>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-container">
+                    <img src="https://images.unsplash.com/photo-1604357209793-fca5dca89f97?w=800&auto=format&fit=crop&q=80" alt="Электросамокат SSpeed" class="real-scooter-img">
+                    <div class="hero-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&auto=format&fit=crop&q=80" alt="Городской пейзаж" class="real-scooter-img">
+                </div>
+                <div class="about-text">
+                    <p>SSpeed - это современный сервис проката электросамокатов в вашем городе. Мы предлагаем удобный способ передвижения для решения повседневных задач.</p>
+                    <p>Наша миссия - сделать городскую мобильность доступной, экологичной и удобной для каждого.</p>
+                    <div class="benefits">
+                        <div class="benefit">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Быстро</h3>
+                            <p>Аренда за 30 секунд через приложение</p>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Удобно</h3>
+                            <p>Самокаты по всему городу</p>
+                        </div>
+                        <div class="benefit">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Экологично</h3>
+                            <p>Нулевые выбросы</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>Как это работает</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>1. Регистрация</h3>
+                    <p>Зарегистрируйтесь на сайте или в приложении</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>2. Найдите самокат</h3>
+                    <p>Выберите ближайший доступный самокат на карте</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <h3>3. Начните поездку</h3>
+                    <p>Отсканируйте QR-код или введите номер самоката</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>4. Завершите аренду</h3>
+                    <p>Припаркуйте самокат в разрешенной зоне и завершите поездку</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scooters" class="tariffs">
+        <div class="container">
+            <h2>Наши самокаты</h2>
+            <div class="scooter-grid">
+                <div class="scooter-card">
+                    <div class="scooter-card-content">
+                        <h3 class="scooter-card-title">SSpeed Basic</h3>
+                        <p class="scooter-card-desc">Комфортный электросамокат для ежедневных поездок по городу.</p>
+                        <a href="#" class="scooter-card-button" onclick="rentNowAction()">Арендовать</a>
+                    </div>
+                </div>
+                <div class="scooter-card">
+                    <div class="scooter-card-content">
+                        <h3 class="scooter-card-title">SSpeed Pro</h3>
+                        <p class="scooter-card-desc">Более мощный электросамокат с увеличенным запасом хода.</p>
+                        <a href="#" class="scooter-card-button" onclick="rentNowAction()">Арендовать</a>
+                    </div>
+                </div>
+                <div class="scooter-card">
+                    <div class="scooter-card-content">
+                        <h3 class="scooter-card-title">SSpeed Max</h3>
+                        <p class="scooter-card-desc">Самый продвинутый самокат с большими колесами и высокой проходимостью.</p>
+                        <a href="#" class="scooter-card-button" onclick="rentNowAction()">Арендовать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tariffs" class="tariffs">
+        <div class="container">
+            <h2>Тарифы</h2>
+            <div class="tariff-cards">
+                <div class="tariff-card">
+                    <h3>Стандарт</h3>
+                    <div class="price">
+                        <span class="number">5₽</span>
+                        <span class="period">/ минута</span>
+                    </div>
+                    <ul class="features">
+                        <li>Разблокировка 50₽</li>
+                        <li>Максимальная скорость 20 км/ч</li>
+                        <li>Доступно 24/7</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="rentNowAction()">Выбрать</button>
+                </div>
+                <div class="tariff-card featured">
+                    <div class="badge">Популярный</div>
+                    <h3>Премиум</h3>
+                    <div class="price">
+                        <span class="number">8₽</span>
+                        <span class="period">/ минута</span>
+                    </div>
+                    <ul class="features">
+                        <li>Разблокировка бесплатно</li>
+                        <li>Максимальная скорость 25 км/ч</li>
+                        <li>Доступно 24/7</li>
+                        <li>Приоритетная поддержка</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="rentNowAction()">Выбрать</button>
+                </div>
+                <div class="tariff-card">
+                    <h3>Дневной</h3>
+                    <div class="price">
+                        <span class="number">599₽</span>
+                        <span class="period">/ день</span>
+                    </div>
+                    <ul class="features">
+                        <li>Безлимитные поездки</li>
+                        <li>Максимальная скорость 25 км/ч</li>
+                        <li>Доступно 24/7</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="rentNowAction()">Выбрать</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Телефон</h3>
+                        <p>+7 (900) 123-45-67</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>info@sspeed.ru</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Адрес</h3>
+                        <p>г. Москва, ул. Пушкина, д. 10</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальные окна -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('login-modal')">&times;</span>
+            <h2>Вход в личный кабинет</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Войти</button>
+            </form>
+            <p class="modal-footer">Нет аккаунта? <a href="#" onclick="switchModal('login-modal', 'register-modal')">Зарегистрироваться</a></p>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('register-modal')">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Имя</label>
+                    <input type="text" id="register-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-phone">Телефон</label>
+                    <input type="tel" id="register-phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Пароль</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Я согласен с <a href="#">Правилами использования</a> и <a href="#">Политикой конфиденциальности</a></label>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal('register-modal')">Назад</button>
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                </div>
+            </form>
+            <p class="modal-footer">Уже есть аккаунт? <a href="#" onclick="switchModal('register-modal', 'login-modal')">Войти</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">SSpeed</span>
+                    <p>Ваш городской транспорт</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>О компании</h3>
+                        <ul>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Карьера</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Сервис</h3>
+                        <ul>
+                            <li><a href="#how-it-works">Как это работает</a></li>
+                            <li><a href="#tariffs">Тарифы</a></li>
+                            <li><a href="#">Зоны катания</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Поддержка</h3>
+                        <ul>
+                            <li><a href="#contacts">Контакты</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Правила</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2025 SSpeed. Все права защищены</p>
+                    <p>Сайт разработан Н.С.</p>
+                </div>
+                <div class="footer-apps">
+                    <a href="#" class="app-button">
+                        <i class="fab fa-google-play"></i>
+                        <span>Google Play</span>
+                    </a>
+                    <a href="#" class="app-button">
+                        <i class="fab fa-apple"></i>
+                        <span>App Store</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Проверяем, авторизован ли пользователь
+            const savedUser = localStorage.getItem('sspeed_current_user');
+
+            if (savedUser) {
+                // Пользователь авторизован
+                document.getElementById('login-button').style.display = 'none';
+                document.getElementById('register-button').style.display = 'none';
+                document.getElementById('logout-button').style.display = 'inline-block';
+                document.getElementById('dashboard-link').style.display = 'inline-block';
+            } else {
+                // Пользователь не авторизован
+                document.getElementById('login-button').style.display = 'inline-block';
+                document.getElementById('register-button').style.display = 'inline-block';
+                document.getElementById('logout-button').style.display = 'none';
+                document.getElementById('dashboard-link').style.display = 'none';
+            }
+        });
+
+        // Функция для обработки нажатия на кнопку "Арендовать самокат"
+        function rentNowAction() {
+            const savedUser = localStorage.getItem('sspeed_current_user');
+
+            if (savedUser) {
+                // Если пользователь авторизован, переходим в личный кабинет
+                window.location.href = 'dashboard.html';
+            } else {
+                // Если пользователь не авторизован, открываем модальное окно регистрации
+                openModal('register-modal');
+            }
+        }
+    </script>
+</body>
+
+</html>
